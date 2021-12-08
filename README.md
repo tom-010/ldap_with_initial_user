@@ -37,3 +37,8 @@ Te password is the same as in the `.env`. In the example it is `secret?`
 4. `Create Object` > `Commit`
 5. Logout
 6. Login with `cn=<<Common Name>>,dc=example,dc=org` and the given password
+
+## Developing
+
+Remember to do `docker-compose down -v` to destroy the volumes such that the initial file
+is read again. Start with `docker-compose up --build` if you changed the bootstrap.ldif
