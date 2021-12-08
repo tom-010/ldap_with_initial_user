@@ -15,13 +15,11 @@ services:
       - ldap
 
   ldap:
-    image: osixia/openldap
+    build: ./ldap
     restart: unless-stopped
     expose:
       - 389
       - 636
-    ports:
-      - 389:389 # only for testing!!
     environment: # username: cn=admin,dc=example,dc=org
       - LDAP_ADMIN_PASSWORD=${ADMIN_PASSWORD}
     volumes:
